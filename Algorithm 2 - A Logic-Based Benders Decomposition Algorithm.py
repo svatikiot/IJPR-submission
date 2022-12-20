@@ -308,7 +308,7 @@ for instance in instances1:
 						for m in range(len(used_machines)):
 							for i in range(len(machine_seq[m])):
 								machine_makespan = round(sol[setup[(m, i)]][1] + load[m][i]*(processing_times[machine_seq[m][i]][used_machines[m]]), 2)
-							if machine_makespan > S:
+							if machine_makespan > zeta:
 								zeta = machine_makespan
 						upper_bound = round(zeta, 2) #The upper bound of iteration is defined.
 						if best_bound > upper_bound:
